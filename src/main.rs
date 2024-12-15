@@ -34,8 +34,8 @@ fn main() {
         ppm.write(image_data.as_bytes()).unwrap();
     }
 
-    let v = Vector3::from(4.0, 8.0, 6.0);
+    let mut v = Vector3::from(4.0, 8.0, 6.0);
     // let u = Vector3::from(4.9, 7.8, 9.0);
 
-    println!("unit: {:?}", v.unit());
+    println!("unit: {:?}", v);
 }

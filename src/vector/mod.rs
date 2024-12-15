@@ -119,6 +119,22 @@ impl ops::SubAssign<&Vector3> for Vector3 {
     }
 }
 
+impl ops::MulAssign<f64> for Vector3 {
+    fn mul_assign(&mut self, rhs: f64) {
+        self[0] *= rhs;
+        self[1] *= rhs;
+        self[2] *= rhs;
+    }
+}
+
+impl ops::DivAssign<f64> for Vector3 {
+    fn div_assign(&mut self, rhs: f64) {
+        self[0] *= 1.0 / rhs;
+        self[1] *= 1.0 / rhs;
+        self[2] *= 1.0 / rhs;
+    }
+}
+
 impl ops::IndexMut<usize> for Vector3 {
     fn index_mut(&mut self, index: usize) -> &mut Self::Output {
         &mut self.e[index]
